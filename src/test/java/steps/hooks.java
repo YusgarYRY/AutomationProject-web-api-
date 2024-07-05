@@ -3,7 +3,7 @@ package steps;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
-import static utility.setup.*;
+import static helper.setup.*;
 
 public class hooks {
 

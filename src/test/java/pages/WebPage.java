@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static utility.setup.driver;
+import static helper.setup.driver;
 
 public class WebPage {
 
