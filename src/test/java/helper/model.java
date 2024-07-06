@@ -64,4 +64,10 @@ public class model {
         String finalEndpoint = endpoint + "/" + globalId;
         return request.when().delete(finalEndpoint);
     }
+
+    public static Response getPostsSpesificId (int numberId, String endpoint) {
+        setUpHeader();
+        String finalEndpoint = endpoint + "/" + numberId + "/" + "posts";
+        return request.when().get(finalEndpoint);
+    }
 }

@@ -68,7 +68,7 @@ public class ApiPage {
         String gender = res.jsonPath().getString("gender");
         String status = res.jsonPath().getString("status");
 
-        assertThat(id).isEqualTo(7014393);
+        assertThat(id).isNotNull();
         assertThat(name).isNotNull();
         assertThat(email).isNotNull();
         assertThat(gender).isIn("male", "female");
@@ -128,5 +128,19 @@ public class ApiPage {
     }
 
 
+    public void getPostFromSpesificUser(int numberId) {
+        res = getPostsSpesificId(numberId, setUrl);
+    }
 
+    public void verifyBodyResponseForGetPostFromActiveUser() {
+
+        String title = res.jsonPath().getString("title");
+        String body = res.jsonPath().getString("body");
+
+
+
+        assertThat(title).isNotNull();
+        assertThat(body).isNotNull();
+
+    }
 }

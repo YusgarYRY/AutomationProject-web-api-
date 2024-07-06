@@ -36,3 +36,16 @@ Feature: Api Automation
     And verify body response for create new user
     Then Hit api for Delete Active User
     And verify status code is 204
+
+   @api
+   Scenario: Get post from active user
+    Given Prepare Url for "GET_ALL_USERS"
+    And hit api get list users
+    And verify status code is 200
+    And verify response body get list users
+    Then Hit api for get user by id 6940241
+    And verify status code is 200
+    And verify body response for get user by id
+    And Get post from spesific user with id 6940241
+    And verify status code is 200
+    And verify body response for get post from active user

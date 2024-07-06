@@ -74,5 +74,13 @@ public class ApiStep {
     }
 
 
+    @And("Get post from spesific user with id {int}")
+    public void getPostFromSpesificUser(int numberId) {
+        apiPage.getPostFromSpesificUser(numberId);
+    }
 
+    @And("verify body response for get post from active user")
+    public void verifyBodyResponseForGetPostFromActiveUser() {
+        apiPage.verifyBodyResponseForGetPostFromActiveUser();
+    }
 }
